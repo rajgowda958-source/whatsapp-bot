@@ -8,7 +8,7 @@ const SPREADSHEET_ID = "1VemwPdy3OmSKld_XelA2ETH4V9MEMU5Wc6PnywvHqwE";
 const RANGE = "Sheet1!A:B";
 
 const auth = new google.auth.GoogleAuth({
-  credentials: require("./service-account.json"),
+  credentials: JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT),
   scopes: ["https://www.googleapis.com/auth/spreadsheets.readonly"]
 });
 
